@@ -232,19 +232,3 @@ def most_points_scored
   end
   baller
 end
-
-def winning_team
-  game_hash.each do |location, team_data|
-    team_data.each do |attribute, data|
-      if attribute==:players
-        data.each do |ballerz|
-          if ballerz[:points]>points
-            points=ballerz[:points]
-            baller=ballerz[:player_name]
-          end
-        end
-      end
-    end
-  end
-  baller
-end
